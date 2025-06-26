@@ -9,8 +9,6 @@ spec:
     repoURL: https://github.com/AlucardTheOne/AppInAppsCD
     targetRevision: main
     path: SpringApps
-    directory:
-      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: argo
