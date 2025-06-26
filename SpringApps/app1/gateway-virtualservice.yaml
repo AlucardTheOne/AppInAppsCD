@@ -24,6 +24,9 @@ spec:
   hosts:
   - "default"
   http:
+  - match:
+    - uri:
+      prefix: /app1
   - route:
     - destination:
         host: spring-boot-app
