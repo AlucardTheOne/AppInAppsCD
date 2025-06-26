@@ -21,6 +21,8 @@ metadata:
   name: spring-boot-virtualservice
   namespace: default
 spec:
+   gateways: 
+    - istio-system/spring-boot-gateway
   hosts:
   - "default"
   http:
