@@ -22,9 +22,7 @@ metadata:
   namespace: default
 spec:
   hosts:
-  - "*"
-  gateways:
-  - istio-system/spring-boot-gateway
+  - "default"
   http:
   - route:
     - destination:
