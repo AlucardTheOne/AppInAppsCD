@@ -24,7 +24,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - spring-boot-gateway2
+  - istio-system/spring-boot-gateway2
   http:
   - route:
     - destination:
