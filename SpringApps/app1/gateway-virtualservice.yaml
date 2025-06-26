@@ -29,6 +29,6 @@ spec:
       prefix: /app1
   - route:
     - destination:
-        host: spring-boot-app
+        host: spring-boot-app.default.svc.cluster.local
         port:
           number: 80
