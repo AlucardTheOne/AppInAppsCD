@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: spring-boot-gateway2
+  name: spring-boot-gateway
   namespace: istio-system
 spec:
   selector:
@@ -18,10 +18,11 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: spring-boot-virtualservice2
+  name: spring-boot-virtualservice
   namespace: default
 spec:
   hosts:
+  gateways: istio-system/spring-boot-gateway
   - "default"
   http:
   - route:
