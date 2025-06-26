@@ -22,7 +22,7 @@ metadata:
   namespace: default
 spec:
   hosts:
-  - "*"
+  - "default"
   http:
   - route:
     - destination:
