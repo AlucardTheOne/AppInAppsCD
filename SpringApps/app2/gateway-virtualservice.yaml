@@ -19,7 +19,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: spring-boot-virtualservice
-  namespace: spring-boot-app2
+  namespace: default
 spec:
   gateways: 
     - istio-system/spring-boot-gateway
