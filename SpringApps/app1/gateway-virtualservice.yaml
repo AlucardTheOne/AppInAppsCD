@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: spring-boot-gateway
-  namespace: istio-system
+  namespace: default
 spec:
   selector:
     istio: ingressgateway
@@ -22,7 +22,7 @@ metadata:
   namespace: default
 spec:
   gateways: 
-    - istio-system/spring-boot-gateway
+    - spring-boot-gateway
   hosts:
   - "default"
   http:
