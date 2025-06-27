@@ -24,7 +24,7 @@ spec:
   gateways: 
     - spring-boot-gateway
   hosts:
-  - "default"
+  - "*"
   http:
   - route:
     - destination:
