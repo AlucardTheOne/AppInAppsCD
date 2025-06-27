@@ -13,7 +13,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "*.192.168.49.2.nip.io"
+    - "*.127.0.0.1.nip.io"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -24,7 +24,7 @@ spec:
   gateways: 
     - spring-boot-gateway
   hosts:
-  - "app1.192.168.49.2.nip.io"
+  - "app1.127.0.0.1.nip.io"
   http:
   - route:
     - destination:
