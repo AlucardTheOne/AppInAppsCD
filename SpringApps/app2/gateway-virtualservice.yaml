@@ -13,7 +13,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "192.168.49.2"
+    - "*.192.168.49.2"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -24,11 +24,10 @@ spec:
   gateways: 
     - spring-boot-gateway
   hosts:
-  - "*"
+  - "app2.192.168.49.2"
   http:
   - route:
     - destination:
-        host: 
-          - "app1.192.168.49.2"
+        host: spring-boot-app2
         port:
           number: 80
