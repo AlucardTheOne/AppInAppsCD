@@ -24,7 +24,7 @@ spec:
   gateways: 
     - spring-boot-gateway
   hosts:
-  - "app2.192.168.49.2"
+  - "app2.192.168.49.2.nip.io"
   http:
   - route:
     - destination:
