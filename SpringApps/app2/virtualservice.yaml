@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: spring-boot-virtualservice2
+  namespace: default
+spec:
+  gateways: 
+    - spring-boot-gateway
+  hosts:
+  - "app2.127.0.0.1.nip.io"
+  http:
+  - route:
+    - destination:
+        host: spring-boot-app2
+        port:
+          number: 80
