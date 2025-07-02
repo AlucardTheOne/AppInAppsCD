@@ -5,8 +5,8 @@ metadata:
   name: spring-boot-virtualservice
   namespace: default
 spec:
-  gateways: 
-    - spring-boot-gateway
+ # gateways: 
+  #  - spring-boot-gateway
   hosts:
   - "app1.127.0.0.1.nip.io"
   http:
