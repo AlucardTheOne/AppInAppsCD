@@ -1,0 +1,37 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jaeger
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://jaegertracing.github.io/helm-charts
+    chart: jaeger
+    targetRevision: 0.73.1
+    helm:
+      releaseName: jaeger
+      values: |
+        provisionDataStore:
+          cassandra: false
+          elasticsearch: false
+          kafka: false
+        storage:
+          type: memory
+        query:
+          ingress:
+            enabled: false
+        collector:
+          ingress:
+            enabled: false
+        agent:
+          enabled: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: jaeger-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
