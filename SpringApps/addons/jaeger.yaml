@@ -11,6 +11,7 @@ spec:
     targetRevision: 0.73.1
     helm:
       releaseName: jaeger
+      insecureSkipTLSVerify: true
       values: |
         provisionDataStore:
           cassandra: false
