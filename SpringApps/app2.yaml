@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: spring-boot-app2
   namespace: argocd
+  argocd.argoproj.io/sync-wave: "3"
 spec:
   project: default
   source:
