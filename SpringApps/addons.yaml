@@ -13,10 +13,11 @@ spec:
     targetRevision: HEAD
     path: SpringApps/addons
   destination:
-    server: in-cluster
+    server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+
 
